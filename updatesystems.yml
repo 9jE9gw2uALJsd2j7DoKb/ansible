@@ -1,0 +1,16 @@
+---
+ 
+ - hosts: all
+   become: true
+   tasks:
+ 
+   - name: update repository index for Ubuntu
+     apt:
+       update_cache: yes
+       force_apt_get: yes
+
+
+   - name: update dist upgrades for Ubuntu
+     apt:
+       upgrade: dist		
+       force_apt_get: yes
