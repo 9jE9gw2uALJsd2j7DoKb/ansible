@@ -1,0 +1,13 @@
+---
+ - hosts: all
+   become: true
+   tasks:
+
+
+
+
+
+ - name: Set timezone to America_New_York
+   community.general.timezone:
+                            name: America/New_York
+
