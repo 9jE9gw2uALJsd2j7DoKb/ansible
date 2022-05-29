@@ -1,6 +1,6 @@
 ---
  
- - hosts: lan
+ - hosts: all
    become: true
    tasks:
  
@@ -8,6 +8,29 @@
      apt:
        upgrade: dist
        update_cache: yes
+
        
+ - hosts: all
+   become: true
+   tasks:
 
 
+   - name: add user sally
+
+     user:
+      name: sally
+      group: root
+
+   - name: add ssh key for sally
+     authorized_key:
+      user: sally
+      key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG/8OkmrT1F5LikZfGbKyC4PElM5wwP00TWgUx9PY3ln raymond@ansible"
+  
+   - name: add sudoers file for sally
+     
+     copy:
+       src: sudoer_sally
+       dest: /etc/sudoers.d/sally
+       owner: root
+       group: root
+       mode: 0440
