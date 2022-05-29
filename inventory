@@ -1,7 +1,10 @@
+[lan]
+192.168.2.103
 unificontroller
 observium
 ns1
 ns2
 plex
-161.35.6.53
 
+[wan]
+161.35.6.53
