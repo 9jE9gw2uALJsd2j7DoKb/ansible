@@ -10,9 +10,9 @@
        update_cache: yes
 
        
- - hosts: all
-   become: true
-   tasks:
+# - hosts: all
+#   become: true
+#   tasks:
 
 
    - name: add user sally
@@ -39,3 +39,10 @@
    - name: everyone on correct timezone
      timezone:
        name: America/New_York
+
+
+   - name: add apps that i use
+     apt:
+      name: 
+       - qemu-guest-agent
+       - net-tools
