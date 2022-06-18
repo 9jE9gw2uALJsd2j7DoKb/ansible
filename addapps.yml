@@ -1,0 +1,14 @@
+---
+ - hosts: all
+   become: true
+   tasks:
+
+
+
+
+
+   - name: add apps that i use
+     apt:
+      name: 
+       - qemu-guest-agent
+       - net-tools

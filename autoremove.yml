@@ -6,8 +6,8 @@
  
    - name: update and upgrade Ubuntu
      apt:
-       upgrade: dist
-       update_cache: yes
+       autoremove: yes
+       purge: yes
 
        
 

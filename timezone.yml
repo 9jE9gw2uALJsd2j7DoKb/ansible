@@ -1,0 +1,11 @@
+---
+ 
+ - hosts: all
+   become: true
+   tasks:
+ 
+   - name: everyone on correct timezone 
+     timezone:
+       name: America/New_York
+       
+  

@@ -1,0 +1,11 @@
+---
+ 
+ - hosts: all
+   become: true
+   tasks:
+ 
+   - name: reboot everyone 
+     reboot:
+       reboot_timeout: 180
+       
+  
