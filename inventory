@@ -1,13 +1,18 @@
 [lan]
+searx.local.lan
+192.168.5.117
 192.168.9.254
 192.168.13.253
 unificontroller
 observium
 ns1
 ns2
-plex
+plexvm.five.lan
 dhcp1
 dhcp2
+arpwatch1
+linuxworkbox.local.lan
+ansible
 [wan]
 
 161.35.6.53
